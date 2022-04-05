@@ -28,7 +28,7 @@
 apiVersion: v1  
 kind: Deployment  
 metadata:  
-    name: netology-ml  
+name: netology-ml  
 spec:  
   replicas: 2  
   selector:  
@@ -50,4 +50,5 @@ spec:
         image: tomcat:8.5.69  
         ports:  
         - containerPort: 8080  
+![image](https://user-images.githubusercontent.com/85709710/161855889-2a51e372-7648-4171-b73b-d73917d8a8f8.png)
 
