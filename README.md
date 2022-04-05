@@ -25,29 +25,29 @@
 
 **2.Написать манифест, который будет содержать в себе следующие условия: ● apiVersion – v1 ● название – netology-ml ● внутри него сервер приложений tomcat версии 8.5.69 с портом 8080 ● наличие 2 реплик ● использование стратегии rollingupdate**
 > ---
-> apiVersion: v1
-> kind: Deployment
-> metadata:
->   name: netology-ml
-> spec:
->   replicas: 2
->   selector:
->     matchLabels:
->       app: tomcat
->   strategy:
->     type: RollingUpdate
->     rollingUpdate:
->       maxSurge: 1   
->       maxUnavailable: 1
->   template:
->     metadata:
->       name: tomcat
->       labels:
->         app: tomcat
->     spec:
->       containers:
->       - name: tomcat
->         image: tomcat:8.5.69
->         ports:
->         - containerPort: 8080
+> apiVersion: v1  
+> kind: Deployment  
+> metadata:  
+>   name: netology-ml  
+> spec:  
+>   replicas: 2  
+>   selector:  
+>     matchLabels:  
+>       app: tomcat  
+>   strategy:  
+>     type: RollingUpdate  
+>     rollingUpdate:  
+>       maxSurge: 1     
+>       maxUnavailable: 1  
+>   template:  
+>     metadata:  
+>       name: tomcat  
+>       labels:  
+>         app: tomcat  
+>     spec:  
+>       containers:  
+>       - name: tomcat  
+>         image: tomcat:8.5.69  
+>         ports:  
+>         - containerPort: 8080  
 >
