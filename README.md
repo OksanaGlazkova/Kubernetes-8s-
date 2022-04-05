@@ -27,35 +27,3 @@
 
 ![image](https://user-images.githubusercontent.com/85709710/161855956-d319e3c2-a040-4040-963e-7e96c39a32cc.png)
 
-
-
-
-
-
- ---
-apiVersion: v1  
-kind: Deployment  
-metadata:  
-name: netology-ml  
-spec:  
-   replicas: 2  
-   selector:  
-      matchLabels:  
-      app: tomcat  
-   strategy:  
-      type: RollingUpdate  
-      rollingUpdate:  
-      maxSurge: 1     
-      maxUnavailable: 1  
-   template:  
-      metadata:  
-      name: tomcat  
-      labels:  
-        app: tomcat  
-      spec:  
-      containers:  
-      - name: tomcat  
-        image: tomcat:8.5.69  
-        ports:  
-        - containerPort: 8080  
-
